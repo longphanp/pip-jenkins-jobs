@@ -15,11 +15,7 @@ pipelineJob('pip-web') {
         }
     }
 
-    steps {
-        remoteTrigger('test-ci', 'test-flow') {
-            token('pip_jenkins')
-        }
-    }
+    authenticationToken("pip_jenkins")
 
     triggers {
         scm('* * * * *')
