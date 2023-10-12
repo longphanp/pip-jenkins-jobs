@@ -16,6 +16,6 @@ pipelineJob('pip-env') {
     }
 
     triggers {
-        githubPush()
+        scm('* * * * *')
     }
 }
