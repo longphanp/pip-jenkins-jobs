@@ -14,4 +14,8 @@ pipelineJob('pip-env') {
             scriptPath('pip-web/dev/Jenkinsfile')
         }
     }
+
+    triggers {
+        githubPush()
+    }
 }
