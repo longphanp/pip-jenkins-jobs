@@ -16,6 +16,6 @@ pipelineJob('pip-web') {
     }
 
     triggers {
-        githubPush()
+        scm('* * * * *')
     }
 }
