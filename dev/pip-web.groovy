@@ -15,6 +15,14 @@ pipelineJob('pip-web') {
         }
     }
 
+    configure {
+        it / triggers << 'org.jenkinsci.plugins.gwt.GenericTrigger' {
+          spec()
+          token("pip_jenkins")
+          causeString("Generic Cause")
+        }
+    }
+
     triggers {
         scm('* * * * *')
     }
