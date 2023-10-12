@@ -11,6 +11,7 @@ pipelineJob('pip-env') {
                     branches('dev')
                 }
             }
+            scriptPath('pip-web/dev/Jenkinsfile')
         }
     }
 }
